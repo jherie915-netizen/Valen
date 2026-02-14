@@ -390,7 +390,7 @@
             const moveButton = (btn, intensity = 150) => {
                 const maxX = intensity;
                 const maxY = intensity;
-                const randomX = (Math.random() * maxX * 2) - maxX;
+                const randomX = - (Math.random() * maxX); // Always move left, away from yes button
                 const randomY = (Math.random() * maxY * 2) - maxY;
                 
                 btn.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${randomX * 0.1}deg)`;
