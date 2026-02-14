@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';">
     <title>Will You Be My Valentine? 💕</title>
     <style>
         * {
@@ -208,6 +209,7 @@
         @media (max-width: 600px) {
             .container {
                 padding: 30px 20px;
+                max-width: 90vw;
             }
 
             h1 {
@@ -218,11 +220,17 @@
                 font-size: 3rem;
             }
 
+            .button-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+
             button {
-                padding: 14px 30px;
+                padding: 16px 30px;
                 font-size: 1.1rem;
                 width: 100%;
-                max-width: 200px;
+                max-width: none;
+                min-height: 48px;
             }
 
             .message {
@@ -230,8 +238,48 @@
                 padding: 12px 20px;
             }
 
+            .heart-grid {
+                gap: 15px;
+            }
+
             .heart-grid span {
-                font-size: 2.5rem;
+                font-size: 2rem;
+            }
+
+            .poem {
+                font-size: 1rem;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            .floating-emoji {
+                font-size: 3.5rem;
+            }
+
+            .button-group {
+                gap: 20px;
+            }
+
+            button {
+                padding: 16px 35px;
+                font-size: 1.15rem;
+            }
+
+            .message {
+                font-size: 1.1rem;
+            }
+
+            .heart-grid span {
+                font-size: 3rem;
             }
         }
     </style>
